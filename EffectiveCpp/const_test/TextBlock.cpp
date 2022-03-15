@@ -37,7 +37,7 @@ namespace EffectiveCpp {
         return pText[position];
     }
 
-    char &TextBlock::operator[](std::size_t position) {
+    char &TextBlock::operator[](std::size_t position) { // 现在只调用const op[]
         return const_cast<char&>(static_cast<const TextBlock&>(*this)[position]);
     }
 

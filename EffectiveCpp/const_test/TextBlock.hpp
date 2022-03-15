@@ -23,8 +23,8 @@ namespace EffectiveCpp {
         void clear();
     private:
         char* pText;
-        mutable std::size_t textLength;
-        mutable bool lengthIsValid;
+        mutable std::size_t textLength; // 这些变量成员，即使在const
+        mutable bool lengthIsValid;     // 函数中也会被更改
     };
 }
 
