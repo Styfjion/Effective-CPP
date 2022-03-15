@@ -9,6 +9,6 @@ std::size_t EffectiveCpp::FileSystem::numDisks() const {
 }
 
 EffectiveCpp::FileSystem &EffectiveCpp::FileSystem::instance() {
-    static FileSystem fileSystem(2);
+    static FileSystem fileSystem(2); // 单例模式
     return fileSystem;
 }
